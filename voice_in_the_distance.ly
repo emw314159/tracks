@@ -16,7 +16,26 @@
 }
 
 
+%{
+Lyrics:
 
+Silence
+on desolate days
+field smoke in the air
+a filter of black haze
+
+It was a long cry out in the wilderness
+a shadow, and a voice in the distance
+
+Silence
+in desparate times
+running backwards
+running the same old line
+
+It was a long cry out in the wilderness
+a shadow, and a voice in the distance
+
+%}
 
 
 
