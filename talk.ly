@@ -1,4 +1,6 @@
-
+\paper {
+  #(set-paper-size "letter")
+}
 
 \header{
 	title = "Talk"
@@ -273,7 +275,12 @@ guitar_three_outro = \relative c {
 
 
 \score {
-\new StaffGroup <<
+
+
+{
+
+
+<<
 
 %{
 *******************
@@ -284,6 +291,7 @@ guitar_three_outro = \relative c {
 			instrumentName = #"Guitar #3 "
 }
 {
+			\tempo 4 = 140
 			\numericTimeSignature
 			\repeat unfold 131 { r1 }
 
@@ -533,6 +541,8 @@ guitar_three_outro = \relative c {
 
 		}
 >>
+
+}
 
 %{
 	\midi {
