@@ -266,6 +266,10 @@ guitar_two_outro = \relative c {
 	r8 c, g' c g2~ g1
 }
 
+guitar_three_before_outro = \relative c {
+    r1 r1 
+	r2 <fis b>8 <g c> <gis cis> r8
+}
 guitar_three_outro = \relative c {
 	r8 f c' f~ f2~ f1
 	r8 f, c' f~ f2~ f1
@@ -293,7 +297,10 @@ guitar_three_outro = \relative c {
 {
 			\tempo 4 = 140
 			\numericTimeSignature
-			\repeat unfold 131 { r1 }
+			\repeat unfold 120 { r1 }
+			\transpose c c''
+			\guitar_three_before_outro
+			r1 r1 r1 r1 r1 r1 r1 r1 
 
 			\transpose c c''
 			\guitar_three_outro
@@ -302,7 +309,11 @@ guitar_three_outro = \relative c {
 
 }
 		\new TabStaff {
-		\repeat unfold 131 { r1 }
+		\repeat unfold 120 { r1 }
+
+		\transpose c c'
+		\guitar_three_before_outro
+		r1 r1 r1 r1 r1 r1 r1 r1
 
 		\set TabStaff.minimumFret = #10
 		\transpose c c'
