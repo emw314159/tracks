@@ -118,8 +118,6 @@ bass_one_bridge = \relative c {
 	bes4 r8 bes8 f' bes b, fis'
 	c g' r8 bes,8 f' bes b, fis'
 	c g' r4 r2
-
-
 }
 
 bass_two_verse = \relative c {
@@ -178,11 +176,276 @@ bass_two_post_chorus = \relative c, {
 	g4 r8 g8~ g8 r8 g4
 }
 
+guitar_one_interlude = \relative c {
+	r8 e8 b' e c f, r4 r1
+}
+
+guitar_one_intro_part_two = \relative c {
+	r1 r1 r1
+	r4 r8 bes'8 f' bes b, fis'
+	c g' r8 bes,8 f' bes b, fis'
+	c g' r4 r2
+}
+
+guitar_one_chorus_one = \relative c' {
+	\set TabStaff.minimumFret = #7
+	\set TabStaff.restrainOpenStrings = ##t
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	\set TabStaff.minimumFret = #3
+	\set TabStaff.restrainOpenStrings = ##t
+	bes bes bes bes bes bes bes bes bes bes bes bes bes bes bes bes
+	g g g g g g g g g g g g g g g g
+
+	\set TabStaff.minimumFret = #7
+	\set TabStaff.restrainOpenStrings = ##t
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	\set TabStaff.minimumFret = #0
+	\set TabStaff.restrainOpenStrings = ##f
+	e, e e e e e e e e e e e e e e e
+	g g g g g g g g g g g g g g g g
+
+	\set TabStaff.minimumFret = #7
+	\set TabStaff.restrainOpenStrings = ##t
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	\set TabStaff.minimumFret = #3
+	\set TabStaff.restrainOpenStrings = ##t
+	bes bes bes bes bes bes bes bes bes bes bes bes bes bes bes bes
+	g g g g g g g g g g g g g g g g
+
+	\set TabStaff.minimumFret = #7
+	\set TabStaff.restrainOpenStrings = ##t
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	\set TabStaff.minimumFret = #0
+	\set TabStaff.restrainOpenStrings = ##f
+	e, e e e e e e e e e e e e e e e
+	g g g g g g g g g g g g g g g g
+}
+
+guitar_one_post_chorus = \relative c' {
+	\set TabStaff.minimumFret = #7
+	\set TabStaff.restrainOpenStrings = ##t
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	\set TabStaff.minimumFret = #0
+	\set TabStaff.restrainOpenStrings = ##f
+	e, e e e e e e e e e e e e e e e
+	g g g g g g g g g g g g g g g g
+
+	\set TabStaff.minimumFret = #7
+	\set TabStaff.restrainOpenStrings = ##t
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	\set TabStaff.minimumFret = #0
+	\set TabStaff.restrainOpenStrings = ##f
+	e, e e e e e e e e e e e e e e e
+	g g g g g g g g g g g g g g g g
+}
+
+guitar_one_bridge = \relative c {
+	r1 r1 r1
+	r4 r8 bes8 f' bes r4
+
+	r1 r1 r1 
+	r4 r8 bes,8 f' bes fis b,
+	g' c, r8 bes8 f' bes fis b,
+	g' c, r4 r2
+
+
+}
+
+guitar_one_outro = \relative c' {
+	\set TabStaff.minimumFret = #7
+	\set TabStaff.restrainOpenStrings = ##t
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	\set TabStaff.minimumFret = #0
+	\set TabStaff.restrainOpenStrings = ##f
+	e, e e e e e e e e e e e e e e e
+	g g g g g g g g g g g g g g g g
+}
+
+guitar_one_intro = \relative c'' {
+	r1
+	\set TabStaff.minimumFret = #5
+	\set TabStaff.restrainOpenStrings = ##t
+	r4 r8 a8 c d a c 
+	\set TabStaff.minimumFret = #1
+	\set TabStaff.restrainOpenStrings = ##t
+	ais dis, r4 r2
+}
+
+guitar_one_intro_a = \relative c' {
+	\set TabStaff.minimumFret = #5
+	\set TabStaff.restrainOpenStrings = ##t
+	r4 r8 b8 e a e g
+	\set TabStaff.minimumFret = #3
+	\set TabStaff.restrainOpenStrings = ##t
+	des g, r4 r2
+	r1
+}
+
 \score {
 
 {
 
 <<
+
+%{
+*******************
+*    Guitar #1    *
+*******************
+%}
+	\new Staff \with {
+		instrumentName = #"Guitar #1 "
+	}
+	{
+		\numericTimeSignature
+		\bass_one_lead_in
+		\repeat unfold 6 { r1 }
+		\guitar_one_intro
+		\guitar_one_intro_a
+		r1 r1
+		\guitar_one_interlude
+		\bar "||"
+		\guitar_one_intro_part_two
+		\bar "||"
+		r1 r1
+		\guitar_one_interlude
+		\guitar_one_interlude
+		r1
+		\bar "||"
+
+		\repeat unfold 21 { r1 }
+		\bar "||"
+		\guitar_one_chorus_one
+		r1
+		\bar "||"
+		r1 r1
+		\guitar_one_interlude
+		r1 r1 
+		\bar "||"
+
+		\transpose c c'
+		\bass_one_verse
+		\transpose c c'
+		\bass_one_verse
+		\transpose c c'
+		\bass_one_verse
+		\transpose c c'
+		\bass_one_verse
+		\transpose c c'
+		\bass_one_verse
+		r1
+		\bar "||"
+
+		\guitar_one_chorus_one
+		\bar "||"
+		\guitar_one_post_chorus
+		r1
+		\bar "||"
+
+		\bass_one_lead_in
+		\transpose c c'
+		\guitar_one_bridge
+		\bar "||"
+
+		\guitar_one_chorus_one
+		\bar "||"
+		\guitar_one_outro
+		\guitar_one_outro
+		\guitar_one_outro
+		\guitar_one_outro
+		r1
+		\bar "||"
+		\bass_one_lead_in
+		\bar "|."
+
+
+	}
+	\new TabStaff {
+		\transpose c c,
+		\bass_one_lead_in
+		\repeat unfold 6 { r1 }
+		\transpose c c,
+		\guitar_one_intro
+		\transpose c c,
+		\guitar_one_intro_a
+		r1 r1
+		\set TabStaff.minimumFret = #0
+		\set TabStaff.restrainOpenStrings = ##f			\transpose c c,
+		\guitar_one_interlude
+		\bar "||"
+
+		\set TabStaff.minimumFret = #1
+		\set TabStaff.restrainOpenStrings = ##t
+		\transpose c c,
+		\guitar_one_intro_part_two
+		\set TabStaff.minimumFret = #0
+		\set TabStaff.restrainOpenStrings = ##f
+		r1 r1
+		\transpose c c,
+		\guitar_one_interlude
+		\transpose c c,
+		\guitar_one_interlude
+		r1
+		\bar "||"
+
+		\repeat unfold 21 { r1 }
+		\bar "||"
+		\transpose c c,
+		\guitar_one_chorus_one
+		r1
+		\bar "||"
+		r1 r1
+		\set TabStaff.minimumFret = #0
+		\set TabStaff.restrainOpenStrings = ##f			\transpose c c,
+		\guitar_one_interlude
+		r1 r1
+		\bar "||"
+
+		\bass_one_verse
+		\bass_one_verse
+		\bass_one_verse
+		\bass_one_verse
+		\bass_one_verse
+		r1
+		\bar "||"
+
+		\transpose c c,
+		\guitar_one_chorus_one
+		\bar "||"
+		\transpose c c,
+		\guitar_one_post_chorus
+		r1
+		\bar "||"
+
+		\set TabStaff.minimumFret = #1
+		\set TabStaff.restrainOpenStrings = ##t			\transpose c c,
+		\bass_one_lead_in
+		\guitar_one_bridge
+		\bar "||"
+
+		\transpose c c,
+		\guitar_one_chorus_one
+		\bar "||"
+		\transpose c c,
+		\guitar_one_outro
+		\transpose c c,
+		\guitar_one_outro
+		\transpose c c,
+		\guitar_one_outro
+		\transpose c c,
+		\guitar_one_outro
+		r1
+		\bar "||"
+		\transpose c c,
+		\bass_one_lead_in
+		\bar "|."
+	}
 
 %{
 *****************
