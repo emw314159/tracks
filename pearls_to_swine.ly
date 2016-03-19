@@ -122,11 +122,140 @@ bass_one_bridge = \relative c {
 
 }
 
+bass_two_verse = \relative c {
+	r1 
+
+	r1 r1
+	r2 r8 b e a
+	c b r4 r2
+
+	r1 r1
+	r2 r8 b, e a
+	f b, r4 r2
+
+	r1 r1
+	r2 r8 b e a
+	c b r4 r2
+
+	r1 r1
+	r2 r8 b, e a
+	f b, r4 r2
+
+	r1 r1 r1
+}
+
+bass_two_chorus = \relative c, {
+	b4 r8 b8~ b8 r8 b4
+	d4 r8 d8~ d8 r8 d4
+	bes'4 r8 bes8~ bes8 r8 bes4
+	g4 r8 g8~ g8 r8 g4
+
+	b,4 r8 b8~ b8 r8 b4
+	d4 r8 d8~ d8 r8 d4
+	e4 r8 e8~ e8 r8 e4
+	g4 r8 g8~ g8 r8 g4
+
+	b,4 r8 b8~ b8 r8 b4
+	d4 r8 d8~ d8 r8 d4
+	bes'4 r8 bes8~ bes8 r8 bes4
+	g4 r8 g8~ g8 r8 g4
+
+	b,4 r8 b8~ b8 r8 b4
+	d4 r8 d8~ d8 r8 d4
+	e4 r8 e8~ e8 r8 e4
+	g4 r8 g8~ g8 r8 g4
+}
+
+bass_two_post_chorus = \relative c, {
+	b4 r8 b8~ b8 r8 b4
+	d4 r8 d8~ d8 r8 d4
+	e4 r8 e8~ e8 r8 e4
+	g4 r8 g8~ g8 r8 g4
+
+	b,4 r8 b8~ b8 r8 b4
+	d4 r8 d8~ d8 r8 d4
+	e4 r8 e8~ e8 r8 e4
+	g4 r8 g8~ g8 r8 g4
+}
+
 \score {
 
 {
 
 <<
+
+%{
+*****************
+*    Bass #2    *
+*****************
+%}
+
+	\new Staff \with {
+		instrumentName = #"Bass #2 "
+	}
+	{
+		\numericTimeSignature
+		\clef "bass"
+		\repeat unfold 74 { r1 }
+		\bass_two_verse
+		r1
+		\bar "||"
+
+		\bass_two_chorus
+		\bar "||"
+		\bass_two_post_chorus
+		r1
+		\bar "||"
+
+		\repeat unfold 11 { r1 }
+		\bar "||"
+
+		\bass_two_chorus
+		\bar "||"
+		\bass_two_post_chorus
+		\bass_two_post_chorus
+		r1
+		\bar "||"
+		r1
+		\bar "|."
+
+	}
+	\new TabStaff {
+		\set Staff.stringTunings = \stringTuning <b,,,,, e,,,, a,,,, d,,, g,,,>
+		\repeat unfold 74 { r1 }
+		\set TabStaff.minimumFret = #7
+		\set TabStaff.restrainOpenStrings = ##t
+		\transpose c c,,,
+		\bass_two_verse
+		r1
+		\bar "||"
+
+		\set TabStaff.minimumFret = #0
+		\set TabStaff.restrainOpenStrings = ##f		
+		\transpose c c,,,
+		\bass_two_chorus
+		\bar "||"
+		\transpose c c,,,
+		\bass_two_post_chorus
+		r1
+		\bar "||"
+
+		\repeat unfold 11 { r1 }
+		\bar "||"
+		
+		\transpose c c,,,
+		\bass_two_chorus
+		\transpose c c,,,
+		\bass_two_post_chorus
+		\transpose c c,,,
+		\bass_two_post_chorus
+		r1
+		\bar "||"
+		r1
+		\bar "|."
+	}
+
+
 
 %{
 *****************
