@@ -60,9 +60,9 @@ bass_one_intro_part_two = \relative c {
 	a4 r8 a8~ a8 r8 r4
 	a4 r8 a8 c d a f'
 	bes8 bes, r4 bes4 r4
-	bes4 r8 bes8 f' bes fis b,
-	g' c, r8 bes8 f' bes fis b,
-	g' c, r4 r2
+	bes4 r8 bes8 f' bes b, fis'
+	c g' r8 bes,8 f' bes b, fis'
+	c g' r4 r2
 }
 
 bass_one_verse = \relative c, {
@@ -94,6 +94,33 @@ bass_one_chorus = \relative c {
 	g g g g g g g g g g g g g g g g
 }
 
+bass_one_post_chorus = \relative c {
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	bes bes bes bes bes bes bes bes bes bes bes bes bes bes bes bes
+	g g g g g g g g g g g g g g g g
+
+	b16 b b b b b b b b b b b b b b b
+	d d d d d d d d d d d d d d d d
+	e e e e e e e e e e e e e e e e
+	g g g g g g g g g g g g g g g g
+}
+
+bass_one_bridge = \relative c {
+	a4 r8 a8~ a8 r8 r4
+	a4 r8 a8 c d a f'
+	bes8 bes, r4 bes4 r4
+	bes4 r8 bes8 f' bes r4
+
+	a,4 r8 a8~ a8 r8 r4
+	a4 r8 a8 c d a f'
+	bes8 bes, r4 bes4 r4
+	bes4 r8 bes8 f' bes b, fis'
+	c g' r8 bes,8 f' bes b, fis'
+	c g' r4 r2
+
+
+}
 
 \score {
 
@@ -153,6 +180,22 @@ bass_one_chorus = \relative c {
 	\bar "||"
 	\bass_one_chorus
 	\bar "||"
+	\bass_one_post_chorus
+	r1
+	\bar "||"
+
+	\bass_one_lead_in
+	\bass_one_bridge
+	\bar "||"
+
+	\bass_one_chorus
+	\bar "||"
+	\bass_one_post_chorus
+	\bass_one_post_chorus
+	r1
+	\bar "||"
+	\bass_one_lead_in
+	\bar "|."
 
 }
 
@@ -242,6 +285,38 @@ bass_one_chorus = \relative c {
 		\transpose c c,,,
 		\bass_one_chorus
 		\bar "||"
+		\transpose c c,,,
+		\bass_one_post_chorus
+		r1
+		\bar "||"
+
+		\set TabStaff.minimumFret = #3
+		\set TabStaff.restrainOpenStrings = ##t
+		\transpose c c,,,
+		\bass_one_lead_in
+		\set TabStaff.minimumFret = #1
+		\set TabStaff.restrainOpenStrings = ##t
+		\transpose c c,,,
+		\bass_one_bridge
+		\bar "||"
+
+		\set TabStaff.minimumFret = #7
+		\set TabStaff.restrainOpenStrings = ##t
+		\transpose c c,,,
+		\bass_one_chorus
+		\bar "||"
+		\transpose c c,,,
+		\bass_one_post_chorus
+		\transpose c c,,,
+		\bass_one_post_chorus
+		r1
+		\bar "||"
+
+		\set TabStaff.minimumFret = #3
+		\set TabStaff.restrainOpenStrings = ##t
+		\transpose c c,,,
+		\bass_one_lead_in
+		\bar "|."
 
 }
 >>
