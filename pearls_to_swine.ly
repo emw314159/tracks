@@ -288,11 +288,156 @@ guitar_one_intro_a = \relative c' {
 	r1
 }
 
+guitar_two_post_chorus = \relative c'' {
+	\set TabStaff.minimumFret = #7
+	\set TabStaff.restrainOpenStrings = ##t
+	r2 <b e>8 <a d>8 r4
+}
+
+
+
 \score {
 
 {
 
 <<
+
+%{
+*******************
+*    Guitar #2    *
+*******************
+%}
+	\new Staff \with {
+		instrumentName = #"Guitar #2 "
+	}
+	{
+		\numericTimeSignature
+		\repeat unfold 111 { r1 }
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		r1
+		\bar "||"
+
+		\repeat unfold 15 { r1 }
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+		\guitar_two_post_chorus
+
+		r1 r1
+
+	}
+	\new TabStaff {
+		\repeat unfold 111 { r1 }
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+
+		r1
+		\bar "||"
+		\repeat unfold 15 { r1 }
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+		\transpose c c,
+		\guitar_two_post_chorus
+
+		r1 r1
+	}
 
 %{
 *******************
