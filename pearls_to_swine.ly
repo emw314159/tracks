@@ -294,6 +294,11 @@ guitar_two_post_chorus = \relative c'' {
 	r2 <b e>8 <a d>8 r4
 }
 
+guitar_three_counterpoint = \relative c''' {
+	e8 b8 g8~ g8~ g8 d'8 g8~ g8
+	e8 b8 g8~ g8~ g8 cis8 fis8~ fis8
+}
+
 
 
 \score {
@@ -301,6 +306,65 @@ guitar_two_post_chorus = \relative c'' {
 {
 
 <<
+%{
+*******************
+*    Guitar #3    *
+*******************
+%}
+	\new Staff \with {
+		instrumentName = #"Guitar #3 "
+	}
+	{
+		\numericTimeSignature
+		\repeat unfold 111 { r1 }
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		r1
+		\repeat unfold 27 { r1 }
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint
+		\guitar_three_counterpoint	
+		r1 r1
+}
+	\new TabStaff {
+		\repeat unfold 111 { r1 }
+		\set TabStaff.minimumFret = #12
+		\set TabStaff.restrainOpenStrings = ##t			\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		r1
+		\repeat unfold 27 { r1 }
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		\transpose c c,
+		\guitar_three_counterpoint
+		r1 r1
+}
+
 
 %{
 *******************
