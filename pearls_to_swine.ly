@@ -299,11 +299,77 @@ guitar_three_counterpoint = \relative c''' {
 	e8\1 b8\2 g8~\3 g8~ g8 cis8\2 fis8~\1 fis8
 }
 
+guitar_four_chorus = \relative c' {
+	r4 r8 <fis\5 b\4>8 r2
+	r4 r8 <a\4 d\3>8 r2
+	r4 r8 <f\5 bes\4>8 r2
+	r4 r8 <d\6 g\5>8 r2
+
+	r4 r8 <fis\5 b\4>8 r2
+	r4 r8 <a\4 d\3>8 r2
+	r4 r8 <b\4 e\3>8 r2
+	r4 r8 <d,\6 g\5>8 r2
+
+	r4 r8 <fis\5 b\4>8 r2
+	r4 r8 <a\4 d\3>8 r2
+	r4 r8 <f\5 bes\4>8 r2
+	r4 r8 <d\6 g\5>8 r2
+
+	r4 r8 <fis\5 b\4>8 r2
+	r4 r8 <a\4 d\3>8 r2
+	r4 r8 <b\4 e\3>8 r2
+	r4 r8 <d\4 g\3>8 r2
+}
+
+guitar_four_outro = \relative c' {
+	r4 r8 <fis\5 b\4>8 r2
+	r4 r8 <a\4 d\3>8 r2
+	r4 r8 <b\4 e\3>8 r2
+	r4 r8 <d\4 g\3>8 r2
+
+}
+
+
 \score {
 
 {
 
 <<
+
+%{
+*******************
+*    Guitar #4    *
+*******************
+%}
+	\new Staff \with {
+		instrumentName = #"Guitar #4 "
+	}
+	{
+		\numericTimeSignature
+		\tempo 4 = 140
+		\repeat unfold 131 { r1 }
+		\guitar_four_chorus
+		\guitar_four_outro
+		\guitar_four_outro
+		\guitar_four_outro
+		\guitar_four_outro
+		r1 r1
+
+	}
+	\new TabStaff {
+		\repeat unfold 131 { r1 }
+		\transpose c c,
+		\guitar_four_chorus
+		\transpose c c,
+		\guitar_four_outro
+		\transpose c c,
+		\guitar_four_outro
+		\transpose c c,
+		\guitar_four_outro
+		\transpose c c,
+		\guitar_four_outro
+		r1 r1
+	}
 
 
 %{
