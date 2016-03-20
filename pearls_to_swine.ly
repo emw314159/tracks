@@ -6,6 +6,8 @@
 	copyright = "Copyright 2016 Emily Williams"
 }
 
+\layout { \omit Voice.StringNumber }
+
 %{
 Lyrics:
 
@@ -289,23 +291,21 @@ guitar_one_intro_a = \relative c' {
 }
 
 guitar_two_post_chorus = \relative c'' {
-	\set TabStaff.minimumFret = #7
-	\set TabStaff.restrainOpenStrings = ##t
-	r2 <b e>8 <a d>8 r4
+	r2 <b\4 e\3>8 <a\4 d\3>8 r4
 }
 
 guitar_three_counterpoint = \relative c''' {
-	e8 b8 g8~ g8~ g8 d'8 g8~ g8
-	e8 b8 g8~ g8~ g8 cis8 fis8~ fis8
+	e8\1 b8\2 g8~\3 g8~ g8 d'8\2 g8~\1 g8
+	e8\1 b8\2 g8~\3 g8~ g8 cis8\2 fis8~\1 fis8
 }
-
-
 
 \score {
 
 {
 
 <<
+
+
 %{
 *******************
 *    Guitar #3    *
