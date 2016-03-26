@@ -45,14 +45,14 @@ guitar_pre_verse = \relative c' {
 	<a\3>8 aes\3 bes\3 a\3 b\3 bes\3 c\3 b\3
 	des\3 c\3 d\3 des\3 ees\3 d\3 e\3 ees\3
 	f\3 e\3 ges\3 f\3 g\3 ges\3 aes\3 g\3	
-	a\3 aes\3 bes\3 a\3 b\3 bes\3 c\3 b\3
+	a\3 aes\3 bes\3 a\3 b\3 bes\3 c\3 r8
 }
 
 seven_string_chorus = \relative c' {
 	<bes\6 f'\5>4 r4 r2
 	r2 <ges\6 des'\5>4 r4
 	r2 <des\7 aes'\6>4 r4
-	r2 r4 r8 <e\7 b'\6>
+	r2 <des\7 aes'\6>4 r8 <e\7 b'\6>
 	r1
 }
 
