@@ -8,6 +8,7 @@
   #(set-paper-size "letter")
 }
 
+\version "2.18.2"  % necessary for upgrading to future LilyPond versions.
 
 \header {
   composer = "Emily Williams"
@@ -15,6 +16,7 @@
   copyright = "Copyright 2007 by Emily Williams"
 }
 
+\layout { \omit Voice.StringNumber }
 
 %{
 Lyrics:
@@ -38,21 +40,37 @@ a shadow, and a voice in the distance
 %}
 
 
+guitar_pre_verse = \relative c' {
+	\bar "|"
+	<a\3>8 aes\3 bes\3 a\3 b\3 bes\3 c\3 b\3
+	des\3 c\3 d\3 des\3 ees\3 d\3 e\3 ees\3
+	f\3 e\3 ges\3 f\3 g\3 ges\3 aes\3 g\3	
+	a\3 aes\3 bes\3 a\3 b\3 bes\3 c\3 b\3
+}
+
+seven_string_chorus = \relative c' {
+	<bes\6 f'\5>4 r4 r2
+	r2 <ges\6 des'\5>4 r4
+	r2 <des\7 aes'\6>4 r4
+	r2 r4 r8 <e\7 b'\6>
+	r1
+}
 
 \score {
   {
 
-    \time 4/4
-    \tempo 4 = 150
+<<
 
-    <<
  
-     \new Staff = "Guitar" <<
+     \new Staff \with {
+		instrumentName = #"6 String "
+}	
 	{
 	  \set Staff.midiInstrument = "electric guitar (clean)"
 	  \override Staff.TimeSignature #'style = #'()
 	  \clef treble
-
+    \time 4/4
+    \tempo 4 = 150
 
 	  r8 <f ais>8 <f ais> <g c'> <g c'> <fis b> <fis b> <gis cis'> <gis cis'>1
 	  r8 <f ais>8 <f ais> <g c'> <g c'> <fis b> <fis b> <gis cis'> <gis cis'>1
@@ -68,10 +86,9 @@ a shadow, and a voice in the distance
 	  r4. <d a d' fis'>8~ <d a d' fis'>4 r4 
 	  r1
 
-	  fis8 gis8 ais8 f fis g fis gis 
-	  g a gis ais a b ais c' 
-	  b cis' c' d' cis' dis' d' e'
-	  dis' f' e' fis' f' g' fis' r8
+	\bar "|"
+	\guitar_pre_verse
+
 
 	  r4. <d a d' fis'>8~ <d a d' fis'>4 r4 
 	  r1
@@ -155,10 +172,9 @@ a shadow, and a voice in the distance
 	 }
 
 	}
-      >>
+      
 
-      \new TabStaff = "Guitar TAB" <<
-	{
+      \new TabStaff 	{
 	  \override Staff.TimeSignature #'style = #'()
 
 	  \set TabStaff.minimumFret = #1
@@ -175,11 +191,7 @@ a shadow, and a voice in the distance
 	  r4. <d a d' fis'>8~ <d a d' fis'>4 r4 
 	  r1
 
-	  \set TabStaff.minimumFret = #3
-	  fis8 gis8 ais8 f fis g fis gis 
-	  g a gis ais a b ais c' 
-	  b cis' c' d' cis' dis' d' e'
-	  dis' f' e' fis' f' g' fis' r8
+		\guitar_pre_verse
 
 	  \set TabStaff.minimumFret = #0
 	  r4. <d a d' fis'>8~ <d a d' fis'>4 r4 
@@ -281,14 +293,44 @@ a shadow, and a voice in the distance
 
 
 	}
-      >>
+      
 
+
+	\new Staff \with {
+		instrumentName = #"7 String "
+	}
+	{
+		\numericTimeSignature
+		\repeat unfold 42 { r1 }
+		r1 r1 r1 r1 r1
+		\seven_string_chorus
+		\seven_string_chorus
+		\seven_string_chorus
+		\seven_string_chorus
+		\repeat unfold 31 { r1 }
+}
+\new TabStaff {
+		\set Staff.stringTunings = \stringTuning <b,,,, e,,, a,,, d,, g,, b,, e,>
+
+		\repeat unfold 42 { r1 }
+		r1 r1 r1 r1 r1
+		\transpose c c,,,
+		\seven_string_chorus
+		\transpose c c,,,
+		\seven_string_chorus
+		\transpose c c,,,
+		\seven_string_chorus
+		\transpose c c,,,
+		\seven_string_chorus
+		\repeat unfold 31 { r1 }
+}
 
 
 
     
-      \new Staff = "Bass" <<
-	{
+      \new Staff \with {
+		instrumentName = #"Bass "
+} 	{
 	  \set Staff.midiInstrument = "electric bass (finger)"
 	  \override Staff.TimeSignature #'style = #'()
 	  \clef bass
@@ -400,13 +442,11 @@ a shadow, and a voice in the distance
 	  \bar "|."
 
 	}
-      >>
-      
-      \new TabStaff = "BassTAB" \with {
+           \new TabStaff = "BassTAB" \with {
 		stringTunings = #bass-tuning
 }
 
-<<
+
 
 	{
 	  \override Staff.TimeSignature #'style = #'()
@@ -554,17 +594,15 @@ a shadow, and a voice in the distance
 	  \set TabStaff.minimumFret = #5
 	  r8 <gis cis'>8 <gis cis'> <gis cis'> <gis cis'> <g c'> r4
 		}
-		}
-	}
-      >> 
-      
-      
-    >>
-  }
-  
 
-  \midi { }
-  \layout { }
-  
-  
+          
+
+  }
 }
+
+>>
+
+}
+}
+
+
