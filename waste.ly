@@ -140,36 +140,36 @@ guitar_verse_part_three = \relative c {
 	r4 <cis\7>4~ <cis\7>2
 }
 
-lead_one = \relative c' {
-	r4 c8 f8~ f c e~ e
-	a,1
+lead_one = \relative c'' {
+	r4 <c\2>8 f8~ f c\2 e~ e
+	<a,\3>1
 }
 
-lead_two = \relative c' {
-	r4 c4~ c4 f4
+lead_two = \relative c'' {
+	r4 <c\2>4~ c4 f4
 	e4 f4~ f2
-	a,2 d2~
+	<a,\3>2 <d\2>2~
 	d1
 }
 
 lead_three = \relative c' {
-r4 dis4 e2~
-e4 dis4~ dis2~
-dis4 b4~ b2
-b8 a8~ a8 gis8~ gis2
-e8 gis8 b4~ b2
-b8 fis8 b,4~ b2~
-b2~ b8 gis8 cis8 gis'8~
-gis1
+r4 <dis\3>4 <e\3>2~
+e4 <dis\3>4~ <dis\3>2~
+<dis\3>4 <b\4>4~ <b\4>2
+<b\4>8 <a\4>8~ <a\4>8 <gis\4>8~ <gis\4>2
+<e\5>8 <gis\4>8 <b\4>4~ <b\4>2
+<b\4>8 <fis\5>8 <b,\6>4~ <b\4>2~
+<b\4>2~ <b\4>8 <gis\6>8 <cis\5>8 <gis'\4>8~
+<gis\4>1
 }
 
 lead_chorus = \relative c' {
-r4 d8 a'8~ a2~
-a2 d2
-d,2 a'2~
-a4 d8 a8~ a8 d,8 a'4
-c,4 g'4 c2
-c,4 g'8 c8~ c8 g8 c,4
+r4 <d\3>8 <a'\2>8~ <a\2>2~
+<a\2>2 <d\1>2
+<d,\3>2 <a'\2>2~
+<a\2>4 <d\1>8 <a\2>8~ <a\2>8 <d,\3>8 <a'\2>4
+<c,\3>4 <g'\2>4 <c\1>2
+<c,\3>4 <g'\2>8 <c\1>8~ <c\1>8 <g\2>8 <c,\3>4
 }
 
 \score {
@@ -195,6 +195,7 @@ c,4 g'8 c8~ c8 g8 c,4
 			e1~ e1~ e1
 		}
 		\repeat unfold 57 { r1 }
+		r1 r1 r1 r1
 	}
 	\new TabStaff {
 		\repeat unfold 66 { r1 }
@@ -204,6 +205,7 @@ c,4 g'8 c8~ c8 g8 c,4
 			e1~ e1~ e1
 		}
 		\repeat unfold 57 { r1 }
+		r1 r1 r1 r1
 }
 
 
@@ -220,24 +222,54 @@ c,4 g'8 c8~ c8 g8 c,4
 	{
 		\numericTimeSignature
 		r1 r1 r1 r1 r1 r1 r1
+		\transpose c c'
 		\lead_one
 		r1 r1
 		r1 r1 r1 r1
+		\transpose c c'
 		\lead_two
 		\transpose c c'
 		\lead_three
 		\repeat unfold 39 { r1 }
 		r1 r1 r1 r1 r1
+		\transpose c c'
 		\lead_one
 		r1 r1
 		r1 r1 r1 r1
+		\transpose c c'
 		\lead_two
 		\transpose c c'
 		\lead_three
 		\repeat unfold 14 { r1 }
-		\lead_chorus
-		\lead_chorus
+		\transpose c c' {
+			\lead_chorus
+			\lead_chorus
+		}
 		r1
+
+		\transpose c c''' {
+			r1 r1
+			<d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g>
+			<d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g>
+
+			<bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16
+			<bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16
+
+			<d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g>
+			<d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g>
+
+			r1 r1
+			<bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16
+			<bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16
+
+			<ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16
+			<ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16
+
+			<bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16
+			<bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16
+}
+		r1
+
 	}
 	\new TabStaff {
 		r1 r1 r1 r1 r1 r1 r1
@@ -252,11 +284,36 @@ c,4 g'8 c8~ c8 g8 c,4
 		r1 r1
 		r1 r1 r1 r1
 		\lead_two
-		\transpose c c'
 		\lead_three
 		\repeat unfold 14 { r1 }
 		\lead_chorus
 		\lead_chorus
+		r1
+
+		\transpose c c'' {
+			r1 r1
+			<d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g>
+			<d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g>
+
+			<bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16
+			<bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16 <bes, ees>16
+
+
+			<d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g>
+			<d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g> <d g>16 <d g> <d g> <d g>
+
+			r1 r1
+
+			<bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16
+			<bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16
+
+			<ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16
+			<ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16 <ges, bes, ees>16
+
+			<bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16
+			<bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16 <bes, d g>16
+
+}
 		r1
 }
 
