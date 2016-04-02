@@ -188,6 +188,7 @@ r4 <d\3>8 <a'\2>8~ <a\2>2~
 	}
 	{
 		\numericTimeSignature
+		\tempo 4 = 120
 		\repeat unfold 66 { r1 }
 		\transpose c c'' {
 			e1~ e1~ e1
@@ -326,22 +327,23 @@ r4 <d\3>8 <a'\2>8~ <a\2>2~
 
 \new ChordNames {
 	\repeat unfold 27 { s1 }
-	\chordmode { d1 d1 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 }
 	\bar "||"
-	\chordmode { d1 d1 d1 d1 c1 c1 }
-	\chordmode { d1 d1 d1 d1 c1 c1 }
-	\chordmode { d1 d1 d1 d1 c1 c1 }
-	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 c1:sus4.7.9 c1:sus4.7.9 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 c1:sus4.7.9 c1:sus4.7.9 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 c1:sus4.7.9 c1:sus4.7.9 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 c1:sus4.7.9 c1:sus4.7.9 }
 	\bar "||"
 	s1 s1
 	s1 s1 s1 s1 s1 s1 s1 s1
 	\repeat unfold 28 { s1 }
-	\chordmode { d1 d1 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 }
 	\bar "||"
-	\chordmode { d1 d1 d1 d1 c1 c1 }
-	\chordmode { d1 d1 d1 d1 c1 c1 }
-	\chordmode { d1 d1 d1 d1 c1 c1 }
-	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 c1:sus4.7.9 c1:sus4.7.9 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 c1:sus4.7.9 c1:sus4.7.9 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 c1:sus4.7.9 c1:sus4.7.9 }
+	\chordmode { d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 d1:sus4.7.9 c1:sus4.7.9 c1:sus4.7.9 }
+
 
 }
 
