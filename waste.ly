@@ -6,6 +6,8 @@
 	copyright = "Copyright 2016 Emily Williams"
 }
 
+\layout { \omit Voice.StringNumber }
+
 %{
 Lyrics:
 
@@ -51,3 +53,169 @@ Unrequited love is such a waste
 I've had better days 
 
 %}
+
+bass_verse_part_one = \relative c {
+	<a\4>16 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4
+	bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4 bes\4
+	<a\4>16 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4 a\4
+}
+
+bass_verse_part_two = \relative c {
+	<f\5>16 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5
+	e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5
+	c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5
+	c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5
+	<f\5>16 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5 f\5
+	e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5 e\5
+	d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5
+	d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5
+}
+
+bass_verse_part_three = \relative c {
+	<a\4>4 r8 <a\4>8~ <a\4>8 r8 r4
+	<aes\4>4 r8 <aes\4>8~ <aes\4>8 r8 r4
+	r4 r8 <cis,\5>8~ <cis\5>8 r8 r4
+	r4 r8 <cis\5>8~ <cis\5>8 r8 r4
+	<e\4>4 r8 <e\4>8~ <e\4>8 r8 r4
+	<e\4>4 r4 r4 <e\4>4
+	<cis\5>4 r4 <cis\5>4 r4
+	r4 <cis\5>4~ <cis\5>2
+}
+
+bass_bridge = \relative c {
+	<d\5>16 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5
+	<d\5>16 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5 d\5
+	<c\5>16 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5
+	<c\5>16 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5 c\5
+}
+
+
+\score {
+
+{
+<<
+
+%{
+*****************
+*    Bass #1    *
+*****************
+%}
+
+\new ChordNames {
+	\repeat unfold 27 { s1 }
+	\chordmode { d1 d1 }
+	\bar "||"
+	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\bar "||"
+	s1 s1
+	s1 s1 s1 s1 s1 s1 s1 s1
+	\repeat unfold 28 { s1 }
+	\chordmode { d1 d1 }
+	\bar "||"
+	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\chordmode { d1 d1 d1 d1 c1 c1 }
+	\chordmode { d1 d1 d1 d1 c1 c1 }
+
+}
+
+	\new Staff \with {
+		instrumentName = #"Bass "
+}
+{
+	\numericTimeSignature
+	\clef "bass"
+	r1 r1
+	\bass_verse_part_one
+	r1 r1
+	\bass_verse_part_one
+	r1
+	\transpose c c,
+	\bass_verse_part_two
+	\bar "||"
+	\bass_verse_part_three
+	\bar "||"
+	\repeat unfold 26 { s1 }
+	r1 r1
+	\transpose c c, {
+		\bass_bridge
+		\bass_bridge
+	}
+	\bar "||"
+	r1 r1 r1
+	\bass_verse_part_one
+	r1 r1
+	\bass_verse_part_one
+	r1
+	\transpose c c,
+	\bass_verse_part_two
+	\bar "||"
+	\bass_verse_part_three
+	\bar "||"
+	\repeat unfold 26 { s1 }
+	r1
+	\transpose c c, {
+		\bass_bridge
+		\bass_bridge
+		\bass_bridge
+		\bass_bridge
+	}
+	r1
+	\bar "|."
+}
+
+	\new TabStaff {
+		\set Staff.stringTunings = \stringTuning <b,,,,, e,,,, a,,,, d,,, g,,,>
+	r1 r1
+	\transpose c c,,, {
+		\bass_verse_part_one	
+		r1 r1
+		\bass_verse_part_one
+	}
+	r1
+	\transpose c c,,,,
+	\bass_verse_part_two
+	
+	\transpose c c,,,
+	\bass_verse_part_three
+
+	\repeat unfold 26 { s1 }
+	r1 r1
+	\transpose c c,,,, {
+		\bass_bridge
+		\bass_bridge
+	}
+	\bar "||"
+	r1 r1 r1
+	\transpose c c,,, {
+		\bass_verse_part_one	
+		r1 r1
+		\bass_verse_part_one
+	}
+	r1
+	\transpose c c,,,,
+	\bass_verse_part_two
+	
+	\transpose c c,,,
+	\bass_verse_part_three
+
+	\repeat unfold 26 { s1 }
+	r1
+	\transpose c c,,,, {
+		\bass_bridge
+		\bass_bridge
+		\bass_bridge
+		\bass_bridge
+	}
+	r1
+
+}
+
+>>
+}
+}
+
+\version "2.18.2"  % necessary for upgrading to future LilyPond versions.
