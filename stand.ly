@@ -13,7 +13,7 @@ Lyrics:
 Stand up you little chickenshit
 when your chosen name is resistance
 your choice to live is resistance
-It's a simple simple matter really
+It's a simple matter really
 Revolution in and beyond the mind
 
 I'm exactly who I am and I make no apologies
