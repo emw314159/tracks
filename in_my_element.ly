@@ -67,9 +67,17 @@ bass_interlude_one = \relative c {
 	r2 <a'\1>8 <bes\1> r4
 	r2 <g\2>8 <fis\2> <d\3>4
 	r1 r1
-
 }
 
+bass_verse_g = \relative c {
+	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <b\5>8~ <b\5>8 <b\5>8
+	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <g\4>8 <g\4>8 <g\4>8
+}
+
+bass_verse_a = \relative c {
+	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <b\5>8~ <b\5>8 <b\5>8
+	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <g\4>8 <a\4>8 <a\4>8
+}
 
 \score {
 
@@ -99,6 +107,18 @@ bass_interlude_one = \relative c {
 	\bass_interlude_one
 	\bar "||"
 
+	\transpose c c, {
+		\bass_verse_g
+		\bass_verse_a
+		\bass_verse_g
+		\bass_verse_a
+		\bass_verse_g
+		\bass_verse_a
+	}
+	\bar "||"
+
+
+
 }
 \new TabStaff {
 		\set Staff.stringTunings = \stringTuning <b,,,,, e,,,, a,,,, d,,, g,,,>
@@ -111,7 +131,15 @@ bass_interlude_one = \relative c {
 	r1 r1
 	\transpose c c,,, {
 		\bass_interlude_one
-	}	
+	}
+	\transpose c c,,,, {
+		\bass_verse_g
+		\bass_verse_a
+		\bass_verse_g
+		\bass_verse_a
+		\bass_verse_g
+		\bass_verse_a
+	}
 
 }
 >>
