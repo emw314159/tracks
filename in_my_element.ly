@@ -76,6 +76,18 @@ bass_interlude_two = \relative c {
 	<c\5>8 <ees\5>8 r8 <e\5> r2
 }
 
+bass_interlude_three = \relative c {
+	<g\4>8 <bes\3>8 r8 <c\3>8 r8 <f,\4>8 r4 r1
+	<d\5>8 <f\4>8 r8 <a\4>8 r8 <aes\4>8 <e\5>4 r1
+	<g\4>8 <bes\3>8 r8 <c\3>8 r8 <f,\4>8 r4 r1
+	<f\4>8 <f\4>8~ <f\4>8 <e\4>8 r8 <d\5>8 <e\4>4 r1
+
+	<g'\2>8 <d\3>8 r8 <g,\4>8 r2 r1
+	<f\4>8 <a\3>8 r8 <b\3> r2 r1
+	<a'\2>8 <d,\3>8 r8 <g,\4>8 r2 r1	
+	<g\4>8 <b\3>8 r8 <c\3>8 r8 <f,\4>8 r4 r1
+}
+
 bass_verse_g = \relative c {
 	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <b\5>8~ <b\5>8 <b\5>8
 	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <g\4>8 <g\4>8 <g\4>8
@@ -165,7 +177,8 @@ bass_verse_part_two = \relative c {
 	\bass_lead_in_last_measure
 	\bar "||"
 
-
+	\bass_interlude_three
+	\bar "||"
 
 
 }
@@ -218,6 +231,10 @@ bass_verse_part_two = \relative c {
 		\bass_lead_in_first_three_measures
 		\bass_lead_in_last_measure
 	}
+	\transpose c c,,, {
+		\bass_interlude_three
+	}
+
 
 }
 >>
