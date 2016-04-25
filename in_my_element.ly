@@ -79,6 +79,17 @@ bass_verse_a = \relative c {
 	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <g\4>8 <a\4>8 <a\4>8
 }
 
+bass_verse_part_two = \relative c {
+	r8 <e\3 b'\2>8 <e\3 b'\2>8 <e\3 b'\2>8 <d\3 a'\2>4 r4
+	r1 
+	r8 <e\3 b'\2>8 <e\3 b'\2>8 <e\3 b'\2>8 <d\3 a'\2>4 r4
+	r1 
+	r8 <d\3 g\2 c\1>8 <d\3 g\2 c\1>8 <d\3 g\2 c\1>8 <c\3 f\2 bes\1>4 r4
+	r1
+	<g'\2 c\1>8 <a\2 d\1>8~ <a\2 d\1>8 <b\2 e\1>8 r2
+	r1
+}
+
 \score {
 
 {
@@ -116,7 +127,8 @@ bass_verse_a = \relative c {
 		\bass_verse_a
 	}
 	\bar "||"
-
+	\bass_verse_part_two
+	\bar "||"
 
 
 }
@@ -139,6 +151,9 @@ bass_verse_a = \relative c {
 		\bass_verse_a
 		\bass_verse_g
 		\bass_verse_a
+	}
+	\transpose c c,,, {
+		\bass_verse_part_two
 	}
 
 }
