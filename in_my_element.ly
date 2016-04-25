@@ -69,6 +69,13 @@ bass_interlude_one = \relative c {
 	r1 r1
 }
 
+bass_interlude_two = \relative c {
+	r2 <aes\4>8 <g\4>8 r8 <c\3>8 r1
+	r2 <ees\3>8 <d\3>8 r8 <bes\4>8 r1
+	<g\4>8 <bes\3>8 r8 <c\3>8 r8 <f,\4>8 r4 r1
+	<c\5>8 <ees\5>8 r8 <e\5> r2
+}
+
 bass_verse_g = \relative c {
 	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <b\5>8~ <b\5>8 <b\5>8
 	<e\5>8 <d\5>8~ <d\5>8 <e\5>8~ <e\5>8 <g\4>8 <g\4>8 <g\4>8
@@ -131,6 +138,36 @@ bass_verse_part_two = \relative c {
 	\bar "||"
 
 
+	\bass_lead_in_first_three_measures
+	\bass_lead_in_last_measure
+	\bar "||"
+	\bass_chorus
+	\bar "||"
+	r1
+
+	\bass_interlude_two
+	\bar "||"
+
+	\transpose c c, {
+		\bass_verse_a
+		\bass_verse_g
+		\bass_verse_a
+		\bass_verse_g
+		\bass_verse_a
+	}
+	\bar "||"
+	\bass_verse_part_two
+	\bar "||"
+	\bass_lead_in_last_measure
+	\bar "||"
+	\bass_chorus
+	\bass_lead_in_first_three_measures
+	\bass_lead_in_last_measure
+	\bar "||"
+
+
+
+
 }
 \new TabStaff {
 		\set Staff.stringTunings = \stringTuning <b,,,,, e,,,, a,,,, d,,, g,,,>
@@ -154,6 +191,32 @@ bass_verse_part_two = \relative c {
 	}
 	\transpose c c,,, {
 		\bass_verse_part_two
+	}
+
+	\transpose c c,,, {
+		\bass_lead_in_first_three_measures
+		\bass_lead_in_last_measure
+		\bass_chorus
+	}
+	r1
+
+	\transpose c c,,, {
+		\bass_interlude_two
+	}
+
+	\transpose c c,,,, {
+		\bass_verse_a
+		\bass_verse_g
+		\bass_verse_a
+		\bass_verse_g
+		\bass_verse_a
+	}
+	\transpose c c,,, {
+		\bass_verse_part_two
+		\bass_lead_in_last_measure
+		\bass_chorus
+		\bass_lead_in_first_three_measures
+		\bass_lead_in_last_measure
 	}
 
 }
