@@ -177,8 +177,15 @@ bass_verse_part_two = \relative c {
 	\bass_lead_in_last_measure
 	\bar "||"
 
+	r1
 	\bass_interlude_three
 	\bar "||"
+
+	\bass_lead_in_last_measure
+	<g\2 c'\1>8 <a\2 d'\1>8~ <a\2 d'\1>8 <b\2 e'\1>8 r2
+	\bar "||"
+	\repeat unfold 16 { r1 }
+	\bar "|."
 
 
 }
@@ -231,11 +238,16 @@ bass_verse_part_two = \relative c {
 		\bass_lead_in_first_three_measures
 		\bass_lead_in_last_measure
 	}
+
+	r1
+
 	\transpose c c,,, {
 		\bass_interlude_three
+		\bass_lead_in_last_measure
+		<g\2 c'\1>8 <a\2 d'\1>8~ <a\2 d'\1>8 <b\2 e'\1>8 r2
 	}
 
-
+	\repeat unfold 16 { r1 }
 }
 >>
 
