@@ -34,7 +34,8 @@ I find I'm in my element
 Out of the intellect
 And into the fire
 
-And I'm reckless to the core
+I'm reckless to the core
+And I wouldn't change a thing
 
 %}
 
@@ -109,11 +110,114 @@ bass_verse_part_two = \relative c {
 	r1
 }
 
+guitar_verse_one_part_one = \relative c {
+	<e\7>8 e\7 r8 g\6 r8 d\7~ <d\7>4
+	<e\7>8 e\7 r8 g\6 r8 a\6~ <a\6>4
+}
+
+guitar_verse_one_part_two = \relative c {
+	<e\7>8 e\7 r8 g\6 r8 d\7~ <d\7>4
+	<e\7>8 e\7 r8 g\6~ <g\6>2 
+}
+
+guitar_pre_first_chorus = \relative c' {
+	r1 r1
+	r8 <e\5 b'\4>8 <e\5 b'\4>8 <e\5 b'\4>8 <d\5 a'\4>4 r4
+	r1 
+	r1
+	r1
+	<d\5 g\4>8 <e\5 a\4>8~ <e\5 a\4>8 <fis\5 b\4>8 r2
+	r1
+}
+
+guitar_first_chorus = \relative c'' {
+	r1 r1 r1 r1
+	r2 r4 ees4
+	d1~
+	d2~ d4 <f\2>4
+	ees1~
+	ees1~
+	ees4 des4~ des2
+	r1 r1
+	<a d>8 <a cis>8 r8 <a d>8 r8 <a cis>8 <c\3 f\2>4~
+	<c f>1
+}
+
+guitar_interlude = \relative c {
+	<c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16
+	<c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16
+
+	<d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16
+	<d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16 <d\7>16
+
+	<c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16
+	<c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16 <c\7>16
+
+	<f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16
+}
+
+
 \score {
 
 {
 
 <<
+%{
+*******************
+*    Guitar #1    *
+*******************
+%}
+
+	\new Staff \with {
+		instrumentName = #"Guitar #1 "
+}
+{
+	\numericTimeSignature
+	\repeat unfold 4 { r1 }
+	\repeat unfold 6 { r1 }
+	\repeat unfold 4 { r1 }
+	\repeat unfold 18 { r1 }
+	r1 r1
+	\guitar_verse_one_part_one
+	\guitar_verse_one_part_two
+	\guitar_verse_one_part_one
+	\guitar_verse_one_part_two
+	\guitar_verse_one_part_one
+
+	\guitar_pre_first_chorus
+	\guitar_first_chorus
+	r1
+	\guitar_interlude
+
+
+
+}
+	\new TabStaff {
+		\set Staff.stringTunings = \stringTuning <b,,,, e,,, a,,, d,, g,, b,, e,>
+
+	\repeat unfold 4 { r1 }
+	\repeat unfold 6 { r1 }
+	\repeat unfold 4 { r1 }
+	\repeat unfold 18 { r1 }
+	r1 r1
+
+	\transpose c c,,, {
+		\guitar_verse_one_part_one
+		\guitar_verse_one_part_two
+		\guitar_verse_one_part_one
+		\guitar_verse_one_part_two
+		\guitar_verse_one_part_one
+	}
+	\transpose c c,,, {
+		\guitar_pre_first_chorus
+		\guitar_first_chorus
+		r1
+		\guitar_interlude
+	}
+
+
+
+}
 
 %{
 **************
