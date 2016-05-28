@@ -156,6 +156,53 @@ guitar_interlude = \relative c {
 	<f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16 <f\6>16
 }
 
+guitar_verse_two_part_one = \relative c {
+	<e\7>8 d\7 r8 e\7 r8 d\7 g\6 g\6
+	<e\7>8 d\7 r8 e\7 r8 g\6 a\6 a\6
+}
+
+guitar_chorus_two_part_one = \relative c'' {
+	<e a>8 <e a> <e a> <e a>
+	<g c> <g c> <g c> <g c>
+	<a d> <a d> <a d> <a d>
+	<ais dis> <ais dis> <ais dis> <ais dis> 
+	<ais dis> <ais dis> <ais dis> <ais dis> 
+	<ais dis> <ais dis> <ais dis> <ais dis> 
+}
+
+guitar_chorus_two_part_two = \relative c'' {
+	<e a>8 <e a> <e a> <e a>
+	<ais dis> <ais dis> <ais dis> <ais dis> 
+	<e a>8 <e a> <e a> <e a>
+	<ais dis> <ais dis> <ais dis> <ais dis> 
+	<e a>8 <e a> <e a> <e a>
+	<b' e>8 <b e> <b e> <b e>
+	<e, a>8 <e a> <e a> <e a>
+	<b' e>8 <b e> <b e> <b e>
+}
+
+guitar_one_solo = \relative c'' {
+	r1
+	<e'\1>8 <b\2>8~ <b\2>8 <a\3>8~ <a\3>8 <bes\2> <g\3>4
+	r1
+	<d\4>8 <g\3>8~ <g\3>8 <cis\2>~ <cis\2>2
+	r1
+	<b\2>8 <g\3>8 <des\4>8~ <des\4>8 <f\4>8 <e\4>8~ <e\4>4
+	r1
+	<d\4>8 <g\3>8~ <g\3>8 <dis'\2>~ <dis\2>2
+	r1
+	<d,\4>8 <g\3>8~ <g\3>8 <d'\2>~ <d\2>2
+	r1
+	<a,\5>8 <d\4>8~ <d\4> <g\3>~ <g\3>2
+	r1
+	<g\3>8 <a,\5>8~ <a\5> <c\4>8~ <c\4>8 <f,\5>8~ <f\5>4
+	r1
+	r1
+}
+
+guitar_one_final = \relative c' {
+	<d\5 g\4>8 <e\5 a\4>8~ <e\5 a\4>8 <fis\5 b\4>8 r2
+}
 
 \score {
 
@@ -189,7 +236,24 @@ guitar_interlude = \relative c {
 	r1
 	\guitar_interlude
 
+	r1 r1
+	\guitar_verse_two_part_one
+	\guitar_verse_two_part_one
+	\guitar_verse_two_part_one
+	\guitar_verse_two_part_one
 
+	\guitar_pre_first_chorus
+	r1
+	\guitar_chorus_two_part_one
+	\guitar_chorus_two_part_one
+	\guitar_chorus_two_part_two
+	\guitar_chorus_two_part_two
+
+	r1
+	\guitar_one_solo
+	r1
+	\guitar_one_final
+	\repeat unfold 16 { r1 }
 
 }
 	\new TabStaff {
@@ -215,7 +279,32 @@ guitar_interlude = \relative c {
 		\guitar_interlude
 	}
 
+	\transpose c c,,, {
+		r1 r1
+		\guitar_verse_two_part_one
+		\guitar_verse_two_part_one
+		\guitar_verse_two_part_one
+		\guitar_verse_two_part_one
 
+		\guitar_pre_first_chorus
+	}
+
+	r1
+	\transpose c c,,, {
+		\guitar_chorus_two_part_one
+		\guitar_chorus_two_part_one
+		\guitar_chorus_two_part_two
+		\guitar_chorus_two_part_two
+	}
+
+	r1
+	\transpose c c,,, {
+		\guitar_one_solo
+		r1
+		\guitar_one_final
+	}
+
+	\repeat unfold 16 { r1 }
 
 }
 
