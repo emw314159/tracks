@@ -46,6 +46,29 @@ sitar_swing_this_a_bit = \relative c' {
 	b4. d8~ d4 e4
 }
 
+sitar_getting_more_involved = \relative c' {
+	g'8 fis g a~ a a a a
+	a g a bes~ bes bes bes bes
+	bes bes bes bes b b b b
+	b bes r8 a8 r8 a8 a a
+	g4 fis4 r8 e8~ e8 ees8~ ees1
+	g4 fis4 r8 e8~ e8 ees8~ ees1
+
+	bes'8 a r8 g8 r8 fis8 g g
+	bes1
+	bes8 a r8 g8 r8 fis8 fis fis
+	g8( a) r2.
+
+	bes8 a r8 fis8~ fis2
+	bes8 a r8 g8~ g8 a g4
+	fis1
+
+	bes8 a bes b~ b b b b
+	c1
+	r2 c8 c c c
+	c8 b r8 bes r2
+}
+
 
 \score {
 {
@@ -68,6 +91,8 @@ sitar_swing_this_a_bit = \relative c' {
 	\sitar_variation_on_intro_part_first
 	\bar "||"
 	\sitar_swing_this_a_bit	
+	\bar "||"
+	\sitar_getting_more_involved
 	\bar "||"
 }
 
