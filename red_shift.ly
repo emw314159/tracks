@@ -79,6 +79,14 @@ sitar_second_section_part_one = \relative c' {
 
 sitar_second_section_part_two = \relative c' {
 	c1 r1 r2. c4~ c1 r1 r2 b4. d8 e1 r1
+	fis4. g8~ g4 fis e2 d4 e4
+	b4. c8~ c4 r8 fis,8~
+	fis8 fis4. r2
+	r8 b8~ b8 c8~ c2
+
+	r1 e4. ees8~ ees4 c b4. c8~ c8 bes8~ bes4 c1
+	e4. d8~ d4 bes4 c4. b8~ b4 c r1
+
 }
 
 
