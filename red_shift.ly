@@ -69,6 +69,18 @@ sitar_getting_more_involved = \relative c' {
 	c8 b r8 bes r2
 }
 
+sitar_second_section_part_one = \relative c' {
+	r1 g'1 r1 r1
+	r2 <c, g'>2~ <c g'>1 r1 r1
+	r2 <c g'>2~ <c g'>1 r1 r1
+	r2 <c g'>2~ <c g'>1 r1 r1
+	r1
+}
+
+sitar_second_section_part_two = \relative c' {
+	c1 r1 r2. c4~ c1 r1 r2 b4. d8 e1 r1
+}
+
 
 \score {
 {
@@ -93,6 +105,12 @@ sitar_getting_more_involved = \relative c' {
 	\sitar_swing_this_a_bit	
 	\bar "||"
 	\sitar_getting_more_involved
+	\bar "||"
+	r1 r1
+	\bar "||"
+	\sitar_second_section_part_one
+	\bar "||"
+	\sitar_second_section_part_two
 	\bar "||"
 }
 
