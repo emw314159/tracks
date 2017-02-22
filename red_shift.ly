@@ -91,6 +91,40 @@ sitar_second_section_part_two = \relative c' {
 
 }
 
+sitar_second_section_part_three = \relative c' {
+	e4. d8~ d4 fis g1
+	fis4. e8~ e4 fis4 g1
+	ees4. fis8~ fis4 g4 g1
+	ees4. fis8~ fis4 g4 g1
+}
+
+sitar_second_section_part_four = \relative c' {
+	bes'4. a8~ a8 e8~ e4~ e1
+	bes'4. a8~ a8 e8~ e4~ e1
+	bes'4. a8~ a8 ees8~ ees4~ ees1
+	bes'4. a8~ a8 ees8~ ees4 d1
+}
+
+sitar_finale = \relative c' {
+	b4. c8~ c4 d e1
+	bes4. c8~ c4 d ees1
+	b4. d8~ d4 e4 f e~ e8 fis4.
+	g4. fis8~ fis4 a
+	b4 a fis g
+	g4. e8~ e4 ees4
+	d4 b c bes
+
+	c1 d1 e1 e1
+	e4. c8~ c2
+	e1 e1 c1 e1
+
+	e8 e e e e e e e
+	b b b b b b b b
+	c c c c c c c d 
+	e e e e c2
+	e8 e e4 c2
+}
+
 
 \score {
 {
@@ -122,6 +156,12 @@ sitar_second_section_part_two = \relative c' {
 	\bar "||"
 	\sitar_second_section_part_two
 	\bar "||"
+	\sitar_second_section_part_three
+	\bar "||"
+	\sitar_second_section_part_four
+	\bar "||"
+	\sitar_finale
+	\bar "|."
 }
 
 \new Staff \with {
