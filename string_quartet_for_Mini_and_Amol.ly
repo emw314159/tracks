@@ -341,12 +341,65 @@ viola = \relative c {
 	<fis d'>1
 }
 
+cello = \relative c {
+
+	r1
+	c8 g~ g2.
+	r1
+	c8 g~ g c,~ c2
+	r1
+	c'8 g~ g2.
+	r1
+	c8 g~ g c,~ c2
+
+	a'1
+	r4 fis4 a2
+	r2 r8 e8 fis a~
+	a2~ a8 e fis a
+	r1
+	c4 r8 g8~ g4 a~
+	a1
+	c4 r8 g8~ g4 a~
+
+	%{ 17 %}
+	a1
+	g8 fis r8 e~ e4. g8
+	r8 fis r8 e~ e2~
+	e1
+	c4. a'8~ a2
+	c,4. a'8~ a2
+	c,4. a'8~ a4 d~
+	d2~ d8 e~ e fis~
+
+	%{ 25 %}
+	fis2. r4
+	fis4 r8 e8~ e2
+	fis4. e8~ e2
+	fis4. e8~ e4 r4
+	g,8 g g g g g g g
+	g g g g g g g g
+	g g g g g g g g
+	g g g g g g g g
+
+	%{ 33 %}
+	c g g g g g g g
+	c g g g g g g r8
+	c g g g g g g r8
+	c g g g g g g r8
+	fis d d d d d d d
+	fis d d d d d d d
+	fis d d d d d r8 d
+	fis d d d d d d d
+
+}
+
 
 \score {
 {
 <<
 
 
+%{
 
 \new Staff \with {
 	instrumentName = #"Violin #1 "
@@ -379,6 +432,19 @@ viola = \relative c {
 		\clef "bass"
 		\numericTimeSignature
 		\viola
+		\bar "|."
+	}
+%}
+
+\new Staff \with {
+	instrumentName = #"Cello "
+	}
+
+	{
+		\tempo 4 = 110
+		\clef "bass"
+		\numericTimeSignature
+		\cello
 		\bar "|."
 	}
 
