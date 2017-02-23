@@ -4,9 +4,10 @@
 
 \header{
         title = "Wedding March for Mini and Amol"
-        subtitle = ""
+        subtitle = "22 February 2017"
         composer = "Emily Williams"
         copyright = "Copyright 2017 Emily Williams"
+		tagline = ""
 }
 
 violin_one = \relative c'' {
