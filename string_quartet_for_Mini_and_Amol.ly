@@ -319,8 +319,26 @@ viola = \relative c {
 	c'4 r4 r2
 	c,1
 	c'1
+	c,2~ c8 b'8~ b fis~
+	fis2. b8 fis
+	fis1
+	c'1
 
-
+	%{ 81 %}
+	c,1
+	b'4. fis8~ fis2
+	b4. fis8~ fis2
+	c'1
+	c,1
+	b'4. fis8~ fis2
+	b4. fis8~ fis2
+	d'2. r8 d,8~
+	
+	d1
+	c'4 r8 fis,8~ fis2
+	b4. fis8~ fis2
+	r1
+	<fis d'>1
 }
 
 
@@ -329,7 +347,7 @@ viola = \relative c {
 <<
 
 
-%{
+
 \new Staff \with {
 	instrumentName = #"Violin #1 "
 	}
@@ -351,7 +369,6 @@ viola = \relative c {
 		\violin_two
 		\bar "|."
 	}
-%}
 
 \new Staff \with {
 	instrumentName = #"Viola "
