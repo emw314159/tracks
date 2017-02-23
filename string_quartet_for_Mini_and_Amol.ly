@@ -224,6 +224,104 @@ violin_two = \relative c' {
 	<fis b>1
 }
 
+viola = \relative c {
+
+	r1
+	d4. a'8~ a2
+	r1
+	d,4. a'8~ a2
+	r1
+	d,4. a'8~ a2
+	r1
+	d,4. a'8~ a2
+
+	r1
+	a4 r8 d8~ d8 e8~ e4
+	r1
+	a,4 d4 fis2
+	r1
+	a2. g,4~
+	g1
+	d2.~ d8 b'~
+
+	%{ 17 %}
+	b1
+	c,4. fis8~ fis4 g
+	c,4. fis8~ fis4 g
+	d1
+	a'1
+	b4. g8~ g2
+	a1
+	b4 r8 g8~ g2
+
+	%{ 25 %}
+	a2~ a8 b8~ b4
+	c4 r8 g8~ g2
+	fis8 e~ e2.
+	fis8 d~ d2.
+	c'8 c c c c c c r8
+	c c c c c c c c
+	c c c c c c c c
+	c c c c c c c r8
+
+	%{ 33 %}
+	e c c c c c c4
+	e8 c c c c c c c
+	e c c c c c c c
+	e c c c c c c r8
+	fis,8 e e e e e e r8
+	fis e e e e e e e
+	fis e e e e e e r8
+	fis e e e e e e e
+
+	%{ 41 %}
+	c fis fis fis fis fis fis r8
+	c fis fis fis fis fis fis fis
+	c fis fis fis fis fis fis fis
+	c fis fis fis fis fis fis r8
+	c4 g'2.~
+	g2 c8 g r8 g~
+	g1
+	r4 c,4 b' r4
+
+	%{ 49 %}
+	r2 g8 c~ c a~
+	a1
+	c,4 g'2.~
+	g2 c8 g~ g g
+	r8 fis8 g fis e fis fis fis
+	r8 e fis4 c g'~
+	g2 c4 c8 c
+	c4. g8~ g8 c4 c8
+
+	%{ 57 %}
+	c1~
+	c2 fis,2~
+	fis4 g c,2~
+	c4. d8~ d2
+	r8 a'8 r2.
+	r8 c8~ c8 e,8~ e2
+	r8 a8 r2.
+	c4. e,8~ e2
+
+	%{ 65 %}
+	a4 r4 r4 r8 c8~
+	c4 d,~ d4. a'8~
+	a2. r8 c8~
+	c4. d,8~ d2
+	a'2. r8 c8~
+	c4 r8 fis,8~ fis2
+	r1
+	r8 c'8~ c4~ c8 c,8~ c4~
+
+	%{ 73 %}
+	c1
+	c'4 r4 r2
+	c,1
+	c'1
+
+
+}
 
 
 \score {
@@ -231,39 +329,49 @@ violin_two = \relative c' {
 <<
 
 
-
+%{
 \new Staff \with {
 	instrumentName = #"Violin #1 "
-}
+	}
 
-{
-	\tempo 4 = 110
-	\numericTimeSignature
-	\violin_one
-	\bar "|."
-}
-
-
+	{
+		\tempo 4 = 110
+		\numericTimeSignature
+		\violin_one
+		\bar "|."
+	}
 
 \new Staff \with {
 	instrumentName = #"Violin #2 "
-}
+	}
 
-{
-	\tempo 4 = 110
-	\numericTimeSignature
-	\violin_two
-	\bar "|."
-}
+	{
+		\tempo 4 = 110
+		\numericTimeSignature
+		\violin_two
+		\bar "|."
+	}
+%}
+
+\new Staff \with {
+	instrumentName = #"Viola "
+	}
+
+	{
+		\tempo 4 = 110
+		\clef "bass"
+		\numericTimeSignature
+		\viola
+		\bar "|."
+	}
+
 
 >>
 }
 
-{
-\midi {
-		\tempo 4 = 110
-	}
-}
+
+\midi {	}
+\layout { }
 
 }
 
