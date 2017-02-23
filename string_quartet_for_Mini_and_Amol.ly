@@ -391,6 +391,73 @@ cello = \relative c {
 	fis d d d d d r8 d
 	fis d d d d d d d
 
+	%{ 41 %}
+	r8 g g g a4 r4
+	c,8 g' g g a4 r8 c,8
+	r8 g'8 g g a4 r8 c,8
+	r8 a'8 a a a4 r4
+	c1
+	d,1
+	fis1
+	g4. d8~ d2
+
+	%{ 49 %}
+	fis1
+	g4. d8~ d2
+	fis1
+	g4. c,8~ c2
+	fis1
+	a1
+	fis1
+	a1
+
+	%{ 57 %}
+	c2. fis,4
+	a1
+	c2. fis,4
+	b2. r4
+	r1
+	fis8 fis fis g~ g2
+	r1
+	fis8 fis fis g~ g4 r4
+
+	%{ 65 %}
+	r1
+	fis8 fis fis g~ g4 r4
+	r1
+	fis8 fis fis g~ g2
+	r1
+	fis8 fis fis d' r2
+	r1
+	a8 a a a a a a a
+
+	%{ 73 %}
+	a a a a a a a a
+	a a a a a a a a
+	d, d d d d d d d
+	a' a a a a a a a
+	fis d d d d d d d
+	a' a a a a a a a
+	fis d d d d d d d
+	g g g g g g g g
+
+	%{ 81 %}
+	c, c c c c c c c
+	g' g g g g g g g
+	c, c c c c c c c
+	d' d d d d d d d
+	fis,8 g r8 a~ a4 r4
+	fis8 g r8 a~ a4 r4
+	fis8 g r8 a~ a4 r4
+	fis8 g r8 a~ a4 r4
+
+	%{ 89 %}
+	fis8 g r8 a~ a4 r4
+	fis8 g r8 a~ a4 r4
+	fis8 g r8 a~ a2
+	r1
+	fis1
+
 }
 
 
@@ -399,7 +466,6 @@ cello = \relative c {
 <<
 
 
-%{
 
 \new Staff \with {
 	instrumentName = #"Violin #1 "
@@ -434,7 +500,6 @@ cello = \relative c {
 		\viola
 		\bar "|."
 	}
-%}
 
 \new Staff \with {
 	instrumentName = #"Cello "
