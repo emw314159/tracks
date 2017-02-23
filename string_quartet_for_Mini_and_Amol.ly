@@ -106,6 +106,125 @@ violin_one = \relative c'' {
 
 
 
+violin_two = \relative c' {
+	c8 c c c c c c c
+	e r8 e e c c c c
+	e e e e c c c c
+	g' g g g c, c c c
+	fis fis fis fis g a g g
+	c, c c c e e e e
+	b b b b d d d d
+	c c c r8 g' g g g
+
+	%{ 9 %}
+	c, c c c fis fis fis fis
+	b b b b b b b r8
+	fis fis fis g g g g b,
+	c c c c c c c c
+	e4. c8~ c2
+	g'4 r8 fis8~ fis4 d
+	e4 r8 c8~ c4 r8 g'~
+	g4 fis4 r8 e fis8 g8~
+
+	%{ 17 %}
+	g8 a8~ a4~ a4 e8 fis8
+	g8 a~ a4 a8 e fis g
+	a a a a a a a a
+	c c c c b b b b
+	a a a a a a a a
+	fis g e r8 fis e d c
+	r8 d b c c c c c
+	b c d fis r8 d c d
+
+	%{ 25 %}
+	b c c c c c c c
+	d e r8 fis d e fis r8
+	b, c c c c c r8 c
+	c c c r8 d e e e
+	fis8 g, g g g g g g
+	fis'8 g, g g g g g g
+	fis'8 g, g g g g g g
+	fis'8 g, g g g g g g
+
+	%{ 33 %}
+	fis'8 g, g g g g g g
+	fis'8 g, g g g g g g
+	fis'8 g, g g g g g g
+	a' a c c a a r8 c
+	fis,8 g, g g g g g g
+	fis'8 g, g g g g g g
+	b' b c c b b c c
+	fis,8 fis g,4 r8 fis' fis g,
+
+	%{ 41 %}
+	fis'8 g, g g g g g g
+	fis'8 g, g g g g g g
+	fis'8 g, g g g g r8 g
+	fis'8 g, g g g g g4
+	r8 g8 g2. 
+	d'1
+	g,1
+	d'1
+
+	%{ 49 %}
+	g,1
+	d'1
+	g,1
+	d'4. g8~ g2
+	g,1
+	d'4. a'8~ a2
+	a,1
+	e'4. b'8~ b2~
+
+	%{ 57 %}
+	b1
+	g,2 c2
+	g1
+	c2. g'4
+	r4 c,8 d'8~ d2~
+	d4. g8~ g2~
+	g1
+	c,,4 d'2.
+
+	%{ 65 %}
+	g1
+	r8 c,,4. d'2~
+	d2 g2~
+	g2 r4 c,,8 d'
+	d1
+	g1
+	r1
+	a,,1
+
+	%{ 73 %}
+	fis'8 b,~ b2.
+	a1
+	fis'8 b,~ b e~ e2
+	a,1
+	fis'8 a,8~ a4 b2
+	a2.~ a8 fis'8~
+	fis8 b,~ b e~ e2
+	a,8 e' e4~ e4 g
+
+	%{ 81 %}
+	fis8 g a, e'~ e2
+	a,8 e'8 e2.
+	fis8 g e g~ g2
+	a,8 fis'8 fis2.
+	e8 fis g d~ d2
+	fis8 g g d~ d2
+	e8 fis g d~ d2
+	a8 fis' r8 fis~ fis2
+
+	%{ 89 %}
+	g8 fis r8 d~ d2
+	a8 fis' r8 fis~ fis2
+	g8 fis r8 d8~ d2
+	r1
+	<fis b>1
+}
+
+
 
 \score {
 {
@@ -121,11 +240,31 @@ violin_one = \relative c'' {
 	\tempo 4 = 110
 	\numericTimeSignature
 	\violin_one
+	\bar "|."
 }
 
+
+
+\new Staff \with {
+	instrumentName = #"Violin #2 "
+}
+
+{
+	\tempo 4 = 110
+	\numericTimeSignature
+	\violin_two
+	\bar "|."
+}
 
 >>
 }
+
+{
+\midi {
+		\tempo 4 = 110
+	}
+}
+
 }
 
 \version "2.18.2"
