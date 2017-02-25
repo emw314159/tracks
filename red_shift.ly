@@ -3,16 +3,18 @@
 }
 
 \header{
-        title = "Red Shift"
-        subtitle = ""
-        composer = "Emily Williams"
-        copyright = "Copyright 2017 Emily Williams"
+	title = "Red Shift"
+    subtitle = ""
+    composer = "Emily Williams"
+    copyright = "Copyright 2017 Emily Williams"
+	tagline = ""
 }
 
 
-%{  ************************
-	*   Sitar Components   *
-	************************
+%{
+************************
+*   Sitar Components   *
+************************
 %}
 
 sitar_intro_part_first = \relative c' {
@@ -126,6 +128,55 @@ sitar_finale = \relative c' {
 }
 
 
+%{
+############
+#   Bass   #
+############
+%}
+
+bassline = \relative c, {
+	%{ 1 %}
+	r1
+	e8 e e e fis r8 r4
+	r4 r8 fis8 c c c c
+	c8 r8 r2.
+	r2 e8 e e e
+	fis8 r8 r4 r4 r8 fis8
+	c c c c c r8 r4
+	r1
+
+	%{ 9 %}
+	r1
+	e8 e e e fis r8 r4
+	r4 r8 fis8 c c c c
+	c r8 r2.
+	r2 e8 e e e
+	fis8 r8 r4 r4 r8 fis8
+	c c c c c r8 r4
+	\bar "||"
+	c'8 c c c c c c c
+
+	%{ 17 %}
+	fis8 e~ e c~ c e r4
+	c8 c c c c c c c
+	fis8 e~ e c~ c e r4
+	fis4 c e c
+	fis4 c e c
+	r4. fis8 b c4.~
+	c4. fis,8 a a a4
+	fis4 c e c
+
+	%{25 %}
+	fis4 c e c
+	r2. r8 fis8
+	a8 a a2.
+	e8 b fis r8 r2
+	r1
+	d8 d d g~ g a r4
+	d,8 d d g~ g a r4
+
+}
+
 \score {
 {
 <<
@@ -172,7 +223,7 @@ sitar_finale = \relative c' {
 	\tempo 4 = 140
 	\numericTimeSignature
 	\clef "bass"
-	\repeat unfold 142 { s1 }
+	\bassline
 
 }
 
