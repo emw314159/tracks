@@ -166,7 +166,7 @@ bassline = \relative c, {
 	c4. fis,8 a a a4
 	fis4 c e c
 
-	%{25 %}
+	%{ 25 %}
 	fis4 c e c
 	r2. r8 fis8
 	a8 a a2.
@@ -174,6 +174,65 @@ bassline = \relative c, {
 	r1
 	d8 d d g~ g a r4
 	d,8 d d g~ g a r4
+	r1
+
+	%{ 33 %}
+	d,8 d d a'~ a b r4
+	d,8 d d a'~ a b r4
+	d,8 d d a'~ a fis r4
+	d8 d d a'~ a fis r4	
+	r2 c8 c8 r8 c8
+	r2 c8 c8 r8 c8
+	r1
+	r4 r8 fis'8 b c4.~
+
+	%{ 41 %}
+	c4. fis,8 a a a4
+	r2 fis4 c4
+	e4 c r2
+	r1
+	e,8 e e e c r8 r4
+	r4 r8 fis e e e e
+	e8 r8 r2.
+	r2 e8 e e e
+
+	%{ 49 %}
+	fis8 r8 r4 r4 r8 fis8
+	c c c c c r8 r4
+	r1
+	r1
+	e8 e e e c r8 r4
+	r4 r8 fis8 c c c c
+	c8 r8 r2.
+	r2 e8 e e e
+
+	%{ 57 %}	
+	fis8 r8 r4 r4 r8 fis8
+	e e e e e r8 r4
+	r1
+	r1
+ 	r1
+	e4. e8~ e4 e4
+	r1
+	r1
+
+	%{ 65 %}
+	r1
+	e4. e8~ e4 e4
+	r1
+	r1
+	r1
+	e4. e8~ e4 e4
+	r1
+	r1
+
+	%{ 73 %}
+	r1
+	e4. e8~ e4 e4
+	r1
+	r1
+	r1
+	
 
 }
 
