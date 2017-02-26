@@ -283,7 +283,14 @@ bassline = \relative c, {
 	\numericTimeSignature
 	\clef "bass"
 	\bassline
+}
 
+\new TabStaff {
+	\set Staff.stringTunings = \stringTuning <b,,,,, e,,,, a,,,, d,,, g,,,>
+	\set TabStaff.minimumFret = #1
+	\set TabStaff.restrainOpenStrings = ##t
+	\transpose c, c,,,,
+	\bassline
 }
 
 >>
