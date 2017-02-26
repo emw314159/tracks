@@ -232,7 +232,88 @@ bassline = \relative c, {
 	r1
 	r1
 	r1
-	
+	c'1~
+	c2.~ c8 g
+	c1~
+
+	%{ 81 %}
+	c2 e4 r4
+	c1~
+	c2.~ c8 g
+	c1~
+	c4. e8~ e fis~ fis fis
+	c1~
+	c2.~ c8 g
+	c1
+
+	%{ 89 %}
+	fis8 fis r8 fis r4 fis4
+	c1~
+	c4. g8 r8 g r8 g
+	c1
+	g8 g8 r8 g8 r2
+	c1
+	g8 g g g r2
+	c1
+
+	%{ 97 %}
+	g8 g g c, r8 c8 r4
+	c'1
+	g8 g g g r8 c,8 c4
+	c'1
+	fis,8 fis fis fis r8 c8 r4
+	c'1
+	fis,8 fis fis fis r8 c8 c4
+	c'1
+
+	%{ 105 %}
+	fis,8 fis fis fis r8 c8 c4
+	c'1
+	fis,8 fis fis fis r8 c8 c4
+	c'1
+	fis,8 fis fis fis r8 c8 c4
+	c'1
+	e4. fis8~ fis2~
+	fis1
+
+	%{ 113 %}
+	g4. fis8~ fis4 e4~
+	e1
+	d1
+	d1
+	g4. fis8~ fis8 e8~ e4
+	d1~
+	d1
+	g4. fis8~ fis8 e8~ e4
+
+	%{ 121 %}
+	d1
+	d2. a'4
+	b1
+	g4. fis8~ fis8 e8~ e4
+	d2. a'4
+	b1
+	g4. fis8~ fis8 e8~ e4
+	d2. a'4
+
+	%{ 129 %}
+	b1
+	g4. fis8~ fis8 e8~ e4
+	d2. a'4
+	b4 c4~ c8 c,8~ c4
+	c1
+	c'8 c c c,8~ c2
+	r2 e8 fis r8 b,
+	r8 fis c4 r2
+
+
+	r2 e'8 fis r8 b,
+	r8 fis c4 r2
+	r2 e'8 fis r8 b,
+	r8 fis c4 r2
+	r2 c'8 e r8 fis
+	r8 g, fis c r2
+
 
 }
 
