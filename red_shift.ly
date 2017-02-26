@@ -371,6 +371,28 @@ bass_two = \relative c {
 	\bar "|."
 }
 
+\new TabStaff \with {
+	instrumentName = #"(or Guitar) "
+}
+
+{
+	\set TabStaff.minimumFret = #1
+	\set TabStaff.restrainOpenStrings = ##t
+	\transpose c c, {
+		\sitar_intro_part_first
+		\sitar_intro_part_second
+		\sitar_variation_on_intro_part_first
+		\sitar_swing_this_a_bit	
+		\sitar_getting_more_involved
+		r1 r1
+		\sitar_second_section_part_one
+		\sitar_second_section_part_two
+		\sitar_second_section_part_three
+		\sitar_second_section_part_four
+		\sitar_finale
+	}
+}
+
 \new Staff \with {
 	instrumentName = #"Bass #1 "
 }
