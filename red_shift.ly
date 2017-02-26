@@ -317,6 +317,22 @@ bassline = \relative c, {
 
 }
 
+
+bass_two = \relative c {
+	\repeat unfold 60 { s1 }
+	e'1~ e1
+	e,,1~ e1
+	e''1~ e1
+	e,,1~ e1
+	e''1~ e1
+	e,,1~ e1
+	e''1~ e1
+	e,,1~ e1
+	\repeat unfold 66 { s1 }
+}
+
+
+
 \score {
 {
 <<
@@ -356,7 +372,7 @@ bassline = \relative c, {
 }
 
 \new Staff \with {
-	instrumentName = #"Bass "
+	instrumentName = #"Bass #1 "
 }
 
 {
@@ -372,6 +388,16 @@ bassline = \relative c, {
 	\set TabStaff.restrainOpenStrings = ##t
 	\transpose c, c,,,,
 	\bassline
+}
+
+\new Staff \with {
+	instrumentName = #"Bass #2 "
+}
+{
+	\tempo 4 = 140
+	\numericTimeSignature
+	\clef "bass"
+	\bass_two
 }
 
 >>
